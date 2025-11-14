@@ -1,16 +1,17 @@
 import java.util.Scanner;
 public class Calculator{
     public static void main(String[] args){
-    Scanner input = new SCanner(System.in);
+    Scanner input = new Scanner(System.in);
     
-    System.out.print("Enter two numbers");
-    double figures = input.nextDouble();
-
-    System.out.print("Input first number");
+    System.out.println("Enter two numbers:");
     double figure1 = input.nextDouble();
 
-    System.out.print("Input second number");
+    System.out.println("Input first number:");
     double figure2 = input.nextDouble();
+
+    System.out.println("Input operator(+, -, *, /):");
+    String operator = input.next();
+
 
     String plus = "+";
     String minus = "-";
@@ -26,18 +27,18 @@ public class Calculator{
     
      double division = figure1 / figure2;
     
-    System.out.print("What do you want to do ?");
-    if("+"){
-    System.out.print("The sum of the numbers is " + sum);
+
+    if(operator.equals( "+")){
+    System.out.println("The sum of the numbers is " + sum);
     }
-    if("-"){
-    System.out.print("The difference of the number is " + subract);
+    if(operator.equals("-")){
+    System.out.println("The difference of the number is " + subtract);
     }
-    if("/"){
-    System.out.print("The division of both numbers is " + division);
+    if(operator.equals("/")){
+    System.out.println("The division of both numbers is " + division);
     }
-    if("*"){
-    System.out.print("The multiplication of both numbers is " + multiplication);
+    if(operator.equals("*")){
+    System.out.println("The multiplication of both numbers is " + multiplication);
     }
 
 
